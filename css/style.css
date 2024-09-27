@@ -1,0 +1,222 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+:root {
+  --main-color: #FFA500;
+  --main-light-color: #717275;
+  --main-dark-color: #000000;
+}
+
+/* hero-start */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 992px) {
+  .hero {
+    height: 100vh;
+  }
+
+  .custom-video,
+  .news-detail-image {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+.heroText {
+  position: absolute;
+  z-index: 9;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
+  text-align: center;
+}
+
+.heroText h1 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.overlay {
+  background: linear-gradient(to top, #000000a3, transparent 90%);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/* hero-end */
+
+/* nav-start */
+.navbar {
+  background-color: #f8f9fa !important;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175) !important;
+  bottom: 76px;
+  position: relative;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.navbar-brand h4 {
+  color: var(--main-color);
+  font-weight: bold;
+}
+
+
+.offcanvas-header h1 {
+  color: var(--main-color);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+  margin-inline: 20px;
+  font-size: 1.10rem;
+  font-weight: 600;
+  color: var(--main-light-color);
+}
+
+.navbar .navbar-nav .nav-item .active {
+  color: black;
+}
+
+.navbar-nav .nav-link::after  {
+  content: "\F287";
+  font-family: bootstrap-icons;
+  display: inline-block;
+  margin-left: 10px;
+  color: var(--main-color);
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  transform: translateY(10px);
+}
+.navbar-nav .nav-link:hover::after {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.navbar-nav .nav-link:hover
+ .nav-item.active  {
+  color: #ffc107;
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.nav-link:hover{
+  color: black !important;
+}
+.navbar form .bi {
+  font-size: 1.5rem;
+  margin-inline: 20px;
+}
+
+.btn {
+  background-color: #fe3f40;
+  color: white;
+  border-radius: 20px;
+  padding: 8px 20px;
+}
+
+.btn:hover {
+  background-color: #5a1878;
+  color: #fff;
+}
+
+/* nav-end */
+/* about-section-start */
+.section-head {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.section-head p {
+  font-size: 1.30rem;
+  color: rgb(175, 175, 175);
+  font-weight: normal;
+  width: 90%;
+}
+
+.about-image,
+.team-image {
+  width: 100%;
+  height: 100%;
+  max-height: 100px;
+  min-height: 400px;
+  object-fit: cover;
+}
+
+.team-detail {
+  background: var(--white-color);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 65%;
+  padding: 22px 32px 32px 32px;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  top: auto;
+  bottom: 2.5rem;
+}
+
+.carousel-control-prev {
+  right: 4rem;
+  left: auto;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  background-color: var(--dark-color);
+  background-size: 50% 50%;
+  border-radius: 100px;
+  width: 3rem;
+  height: 3rem;
+}
+
+.portfolio-detail {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-info {
+  margin: 20px;
+}
+
+.section-padding {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+/* about-section-end */
+
+/* .portfolio-start */
+.portfolio-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-text {
+  margin: 20px;
+}
+
+/* .portfolio-end */
+
+@media screen and (max-width: 320px) {
+  .custom-video{
+    height: 100vh;
+  }
+  .section-head p {
+    font-size: 1rem;
+  }
+}
